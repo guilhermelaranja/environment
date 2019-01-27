@@ -14,4 +14,4 @@ ENV JAVA_HOME "/usr/local/java"
 ENV PATH "$JAVA_HOME/bin:$PATH"
 
 RUN pip3 install --upgrade pip
-RUN pip3 install jupyter pandas numpy matplotlib tensorflow keras pyspark
+RUN pip3 install jupyter pandas numpy matplotlib sklearn imbalanced-learn tensorflow keras pyspark
