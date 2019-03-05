@@ -12,7 +12,7 @@ cmd_stop() {
 
 cmd_run() {
   docker run -it --rm --name 'gago' \
-  -v "/home/gago/Documentos:/opt/gago" \
+  -v "$PWD/..:/opt/gago" \
   -w '/opt/gago' \
   -p 8085:8085 \
   'gago:latest' "/opt/gago/environment/entrypoint/jupyter.sh"
