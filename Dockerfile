@@ -15,3 +15,4 @@ ENV PATH "$JAVA_HOME/bin:$PATH"
 
 RUN pip3 install --upgrade pip
 RUN pip3 install jupyter pandas numpy matplotlib bokeh holoviews sklearn imbalanced-learn tensorflow keras pyspark
+RUN apt-get install -y postgresql-client
