@@ -15,8 +15,7 @@ ENV PATH "$JAVA_HOME/bin:$PATH"
 RUN conda update -n base -c defaults conda
 RUN conda create -n env python=3.6
 RUN conda install -c anaconda jupyter pandas numpy scikit-learn
-RUN conda install -c conda-forge matplotlib imbalanced-learn tensorflow keras pyspark
+RUN conda install -c conda-forge matplotlib holoviews imbalanced-learn tensorflow keras pyspark
 RUN conda install -c bokeh bokeh
-RUN conda install -c ioam holoviews
 RUN echo "source activate env" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
