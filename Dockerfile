@@ -12,17 +12,11 @@ ENV JAVA_HOME "/usr/local/java"
 ENV PATH "$JAVA_HOME/bin:$PATH"
 
 # Python and Dependencies
+RUN conda update -n base -c defaults conda
 RUN conda create -n env python=3.6
-RUN conda install -c anaconda jupyter
-RUN conda install -c anaconda pandas
-RUN conda install -c anaconda numpy
-RUN conda install -c conda-forge matplotlib
+RUN conda install -c anaconda jupyter pandas numpy scikit-learn
+RUN conda install -c conda-forge matplotlib imbalanced-learn tensorflow keras pyspark
 RUN conda install -c bokeh bokeh
 RUN conda install -c ioam holoviews
-RUN conda install -c anaconda scikit-learn
-RUN conda install -c conda-forge imbalanced-learn
-RUN conda install -c conda-forge tensorflow
-RUN conda install -c conda-forge keras
-RUN conda install -c conda-forge pyspark
 RUN echo "source activate env" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
