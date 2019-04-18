@@ -4,5 +4,5 @@ Criar imagem:<br>
 Executar:<br>
 <code>bash docker.sh run</code><br><br>
 
-Acessando Jupyter:<br>
+Acessar Jupyter:<br>
 <code>localhost:8085</code>
