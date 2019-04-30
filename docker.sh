@@ -18,6 +18,15 @@ cmd_run() {
   'gago:latest' "/opt/gago/environment/entrypoint/jupyter.sh"
 }
 
+cmd_bash() {
+  docker run -it --rm --name 'gago' \
+  -v "$PWD/..:/opt/gago" \
+  -w '/opt/gago' \
+  -p 8085:8085 \
+  'gago:latest' "/bin/bash"
+}
+
+
 cmd_exec() {
   docker exec -it 'gago' "$@"
 }
